@@ -87,15 +87,31 @@
 
 
 
-<meta name="description" content="This wetsize has all my projects">
-<meta property="og:type" content="website">
+<meta name="description" content="利用gulp来对less编译成css第一步，我们需要明白什么是gulp，什么是less，编译又是什么意思，这样做的意义在于哪里，对我们有什么帮助（请先安装好了node.js，需要这个环境）。
+我们需要知道gulp是啥，它是一个拥有很多功能的东西，例如压缩图片啊，检验js书写是否正确啦，但是这里介绍的是，它的其中一个功能就是用于编译less。
+好，接下来设计到另一个词，这里的编译时什么意思，我们或许">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Welcome to GuangzhuL's site">
-<meta property="og:url" content="http://guangzhul.github.io/index.html">
+<meta property="og:url" content="http://guangzhul.github.io/2017/03/20/利用gulp来对less编译成css/index.html">
 <meta property="og:site_name" content="Welcome to GuangzhuL's site">
-<meta property="og:description" content="This wetsize has all my projects">
+<meta property="og:description" content="利用gulp来对less编译成css第一步，我们需要明白什么是gulp，什么是less，编译又是什么意思，这样做的意义在于哪里，对我们有什么帮助（请先安装好了node.js，需要这个环境）。
+我们需要知道gulp是啥，它是一个拥有很多功能的东西，例如压缩图片啊，检验js书写是否正确啦，但是这里介绍的是，它的其中一个功能就是用于编译less。
+好，接下来设计到另一个词，这里的编译时什么意思，我们或许">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/less1.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/less2.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/less3.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/less4.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/package.json.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/gulp-less.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/gulpfile.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/gulp-less-css.png">
+<meta property="og:updated_time" content="2017-03-19T16:55:43.125Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Welcome to GuangzhuL's site">
-<meta name="twitter:description" content="This wetsize has all my projects">
+<meta name="twitter:description" content="利用gulp来对less编译成css第一步，我们需要明白什么是gulp，什么是less，编译又是什么意思，这样做的意义在于哪里，对我们有什么帮助（请先安装好了node.js，需要这个环境）。
+我们需要知道gulp是啥，它是一个拥有很多功能的东西，例如压缩图片啊，检验js书写是否正确啦，但是这里介绍的是，它的其中一个功能就是用于编译less。
+好，接下来设计到另一个词，这里的编译时什么意思，我们或许">
+<meta name="twitter:image" content="http://omjxkpih5.bkt.clouddn.com/less1.png">
 
 
 
@@ -123,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://guangzhul.github.io/"/>
+  <link rel="canonical" href="http://guangzhul.github.io/2017/03/20/利用gulp来对less编译成css/"/>
 
 
 
 
 
-  <title> Welcome to GuangzhuL's site </title>
+  <title>  | Welcome to GuangzhuL's site </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-cn">
@@ -163,9 +179,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -248,9 +262,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -281,9 +295,6 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/20/利用gulp来对less编译成css/" itemprop="url">
-                  Untitled
-                </a>
               
             
           </h1>
@@ -334,9 +345,7 @@
       
 
       
-        
-          
-            <h1 id="利用gulp来对less编译成css"><a href="#利用gulp来对less编译成css" class="headerlink" title="利用gulp来对less编译成css"></a>利用gulp来对less编译成css</h1><h3 id="第一步，我们需要明白什么是gulp，什么是less，编译又是什么意思，这样做的意义在于哪里，对我们有什么帮助（请先安装好了node-js，需要这个环境）。"><a href="#第一步，我们需要明白什么是gulp，什么是less，编译又是什么意思，这样做的意义在于哪里，对我们有什么帮助（请先安装好了node-js，需要这个环境）。" class="headerlink" title="第一步，我们需要明白什么是gulp，什么是less，编译又是什么意思，这样做的意义在于哪里，对我们有什么帮助（请先安装好了node.js，需要这个环境）。"></a>第一步，我们需要明白什么是gulp，什么是less，编译又是什么意思，这样做的意义在于哪里，对我们有什么帮助（请先安装好了node.js，需要这个环境）。</h3><ol>
+        <h1 id="利用gulp来对less编译成css"><a href="#利用gulp来对less编译成css" class="headerlink" title="利用gulp来对less编译成css"></a>利用gulp来对less编译成css</h1><h3 id="第一步，我们需要明白什么是gulp，什么是less，编译又是什么意思，这样做的意义在于哪里，对我们有什么帮助（请先安装好了node-js，需要这个环境）。"><a href="#第一步，我们需要明白什么是gulp，什么是less，编译又是什么意思，这样做的意义在于哪里，对我们有什么帮助（请先安装好了node-js，需要这个环境）。" class="headerlink" title="第一步，我们需要明白什么是gulp，什么是less，编译又是什么意思，这样做的意义在于哪里，对我们有什么帮助（请先安装好了node.js，需要这个环境）。"></a>第一步，我们需要明白什么是gulp，什么是less，编译又是什么意思，这样做的意义在于哪里，对我们有什么帮助（请先安装好了node.js，需要这个环境）。</h3><ol>
 <li>我们需要知道<a href="http://gulpjs.com/" target="_blank" rel="external">gulp</a>是啥，它是一个拥有很多功能的东西，例如压缩图片啊，检验js书写是否正确啦，但是这里介绍的是，它的其中一个功能就是用于编译less。</li>
 <li>好，接下来设计到另一个词，这里的编译时什么意思，我们或许可以理解成“翻译”，相当于有个机器将英文翻译成中文那样子，并且是实时是那种，这个过程我们叫做编译。</li>
 <li>接着，<a href="http://lesscss.cn/" target="_blank" rel="external">less</a>又是什么呢？它是一种语言，它有它的书写方式，整体架构跟CSS差别不会太大，但是，它却可以快速提高书写的效率，至于怎么的一种语法可以让它快速书写呢？大致情况如下：<img src="http://omjxkpih5.bkt.clouddn.com/less1.png" alt="less1"> <img src="http://omjxkpih5.bkt.clouddn.com/less2.png" alt="less2"><img src="http://omjxkpih5.bkt.clouddn.com/less3.png" alt="less3"><img src="http://omjxkpih5.bkt.clouddn.com/less4.png" alt="less4">它的使用大概就是像上面截图的那个样子了，就是加了一些算法和方便的技巧进去，可能有人觉得这约么就是方便了一点点而已，有这个必要吗？其实很有必要，写代码最怕的就是乱，这个可以在大工程里面帮助到你很多的，至少你书写会很方便，这点优处等你用了之后你才能切身感受到，你要做到的就是去用就行了。</li>
@@ -368,16 +377,20 @@
 <h3 id="第三步，我所说的流程基本讲完了，其实就是五分钟的事，但是如果看了凌乱的百度的相关资料的话，有可能会走上很多弯路，并且重重复复不知道问题出现在哪里，这里只是用来编译less这个单一的功能的，没有其他的整套功能，我现在还不会用其他的，但是百度会有一整套的。不过如果仅仅是想学习这个的话，还是看这篇文章写得比较有逻辑性，并且在逻辑上和顺序上是合理的，没有那么多和那么乱，这个大概花了我一整天的时间。"><a href="#第三步，我所说的流程基本讲完了，其实就是五分钟的事，但是如果看了凌乱的百度的相关资料的话，有可能会走上很多弯路，并且重重复复不知道问题出现在哪里，这里只是用来编译less这个单一的功能的，没有其他的整套功能，我现在还不会用其他的，但是百度会有一整套的。不过如果仅仅是想学习这个的话，还是看这篇文章写得比较有逻辑性，并且在逻辑上和顺序上是合理的，没有那么多和那么乱，这个大概花了我一整天的时间。" class="headerlink" title="第三步，我所说的流程基本讲完了，其实就是五分钟的事，但是如果看了凌乱的百度的相关资料的话，有可能会走上很多弯路，并且重重复复不知道问题出现在哪里，这里只是用来编译less这个单一的功能的，没有其他的整套功能，我现在还不会用其他的，但是百度会有一整套的。不过如果仅仅是想学习这个的话，还是看这篇文章写得比较有逻辑性，并且在逻辑上和顺序上是合理的，没有那么多和那么乱，这个大概花了我一整天的时间。"></a>第三步，我所说的流程基本讲完了，其实就是五分钟的事，但是如果看了凌乱的百度的相关资料的话，有可能会走上很多弯路，并且重重复复不知道问题出现在哪里，这里只是用来编译less这个单一的功能的，没有其他的整套功能，我现在还不会用其他的，但是百度会有一整套的。不过如果仅仅是想学习这个的话，还是看这篇文章写得比较有逻辑性，并且在逻辑上和顺序上是合理的，没有那么多和那么乱，这个大概花了我一整天的时间。</h3></li>
 </ol>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -386,169 +399,38 @@
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://guangzhul.github.io/2017/03/09/搭建个人博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="GuangzhuL">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Welcome to GuangzhuL's site">
-    </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/03/09/搭建个人博客/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2017/03/09/搭建个人博客/" itemprop="url">
-                  Untitled
-                </a>
-              
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-09T19:43:10+08:00">
-                2017-03-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <hr>
-<h2 id="利用Hexo在GitHub搭建个人的Blog"><a href="#利用Hexo在GitHub搭建个人的Blog" class="headerlink" title="利用Hexo在GitHub搭建个人的Blog"></a>利用Hexo在GitHub搭建个人的Blog</h2><h2 id="梁光柱-2017年3月9日"><a href="#梁光柱-2017年3月9日" class="headerlink" title="梁光柱 2017年3月9日"></a><a href="http://guangzhul.github.io">梁光柱</a> 2017年3月9日</h2><h2 id="第一步，在开始之前我们先要配置好要操作的环境，接下来我将教大家如何去给自己的电脑配置环境"><a href="#第一步，在开始之前我们先要配置好要操作的环境，接下来我将教大家如何去给自己的电脑配置环境" class="headerlink" title="第一步，在开始之前我们先要配置好要操作的环境，接下来我将教大家如何去给自己的电脑配置环境"></a>第一步，在开始之前我们先要配置好要操作的环境，接下来我将教大家如何去给自己的电脑配置环境</h2><hr>
-<ol>
-<li><a href="https://nodejs.org/en/" target="_blank" rel="external">node.js</a> 自己到官网去下载node.js，这是一个js运行的环境，帮助你到时候的页面加载，安装过程简单，可以一直点击next即可。</li>
-<li><a href="https://git-scm.com/" target="_blank" rel="external">Git</a> 这个软件的安装也不会有难度，一直next能够顺利安装，该软件的用途是将本地与远端连接起来。</li>
-<li><a href="https://github.com/" target="_blank" rel="external">GitHub</a> 这是一个github的账号，没有的人要到官网去申请，用于存放本地的文件。</li>
-<li><a href="http://www.qiniu.com/" target="_blank" rel="external">七牛云</a> 这是一个实名之后可以免费在云端存储图片的网站，相当于你有一个服务器，然后利用markdown的形式放进图片（因为markdown写文章里面的图片放置是需要给予一个外部访问网址的，所以我们需要一个云端去存储图片）。</li>
-<li><a href="http://www.qiniu.com/" target="_blank" rel="external">有道云笔记</a> 这是一个用于写笔记的应用，它可以用来书写markdown，并且还可以边写边预览，很方便我们去写博客的文章内容，所以可以下载。</li>
-<li><a href="http://www.sublimetext.com/" target="_blank" rel="external">sublime</a> 这是一个轻量级的编程软件，可以用于后续_config.yml文件的编写。</li>
-</ol>
-<hr>
-<h2 id="第二步，接下来。我将用截图的方式告诉你如何去一步一步操作，其中图片里面的内容都是来源于网络，仅用于学习和个人的知识的笔记等用途，不参与任何的商业用途，如有侵犯各作者的版权，请联系邮箱guagnzhul-qq-com通知本人及时删除。"><a href="#第二步，接下来。我将用截图的方式告诉你如何去一步一步操作，其中图片里面的内容都是来源于网络，仅用于学习和个人的知识的笔记等用途，不参与任何的商业用途，如有侵犯各作者的版权，请联系邮箱guagnzhul-qq-com通知本人及时删除。" class="headerlink" title="第二步，接下来。我将用截图的方式告诉你如何去一步一步操作，其中图片里面的内容都是来源于网络，仅用于学习和个人的知识的笔记等用途，不参与任何的商业用途，如有侵犯各作者的版权，请联系邮箱guagnzhul@qq.com通知本人及时删除。"></a>第二步，接下来。我将用截图的方式告诉你如何去一步一步操作，其中图片里面的内容都是来源于网络，仅用于学习和个人的知识的笔记等用途，不参与任何的商业用途，如有侵犯各作者的版权，请联系邮箱guagnzhul@qq.com通知本人及时删除。</h2><hr>
-<ol>
-<li>首先，解决一个重要的问题是node.js的安装，如有读者安装遇到问题，请参考如下的链接去解决并验证是否安装成功，<a href="http://jingyan.baidu.com/article/b0b63dbfca599a4a483070a5.html" target="_blank" rel="external">检验node.js安装是否成功请点击这里</a>。</li>
-<li>第二个是Git的安装，这个简单无脑，毫无难度，实在还能遇到安装上的问题，请各位读者自行百度解决，这里不再细说，但是里面涉及到一个钥匙绑定的环节，就是想办法用本地的git绑定好远程的github账号，以方便本地可以对远程进行操作，操作的过程如下图所示：<img src="http://omjxkpih5.bkt.clouddn.com/git.png" alt="git的绑定操作"></li>
-<li>GitHub申请完成之后，开始搞<a href="https://github.com/blog/272-github-pages" target="_blank" rel="external">github pages</a>，不懂GitHub pages是啥的没关系，跟着下面的链接来做就行，<a href="http://jingyan.baidu.com/article/ed2a5d1f3732cb09f7be1745.html" target="_blank" rel="external">创建github pages</a>，你只需要知道它是一个创建之后可以让你有一个可以访问的个人网站就行，等你操作完毕之后，你自然而然知道这个是什么。</li>
-<li>接下来，我们用安装完的git去安装hexo，我们直接在git bash上面下载安装hexo，这个过程直接参考下面的图片来做，跟着指令一步一步下来就行：<img src="http://omjxkpih5.bkt.clouddn.com/hexo1.png" alt="hexo1"><br>做完上面的步骤之后你将可以看到你想要的页面，但是这一切的展示仅仅止步于本地，外面什么都看不到，所以，接下来的一步就是让你的本地的内容可以同步到远端去，也就是你的个人网站，操作如下：<br><img src="http://omjxkpih5.bkt.clouddn.com/hexo2.png" alt="hexo2"></li>
-<li>好，能顺利走到这一步的人，恭喜你已经可以访问到自己的网站了不信的话你可以试一下，唯一的问题是，你网站的文字内容还有样式全部都是人家的，而你需要的是你自己可以去修改样式并且会更改里面的内容，从而才能让你自己拥有自己能用的博客。</li>
-</ol>
-<hr>
-<h2 id="第三步，接下来，我将教你如何去操作写一篇属于自己原生的博客。"><a href="#第三步，接下来，我将教你如何去操作写一篇属于自己原生的博客。" class="headerlink" title="第三步，接下来，我将教你如何去操作写一篇属于自己原生的博客。"></a>第三步，接下来，我将教你如何去操作写一篇属于自己原生的博客。</h2><ol>
-<li>接下来，先让你去了解下博客里面的环境配置，并能够读懂每一个单词的意思，参考下面这篇博客，<a href="http://xiaoxuetu.github.io/2015/08/31/hexo-guide/" target="_blank" rel="external">利用Hexo搭建个人博客－博客初始化篇</a>，看完之后，你将会知道那些单词代表的含义，并且学会去操纵每一项配置。</li>
-<li>配置好你要的环境之后，你需要一个不是默认的主题，这样做的原因很简单，证明你不是伸手党，是一个会自己换主题的人，很简单，你随便到百度搜索找主题，然后放进博客的themes目录里面，再修改你的_config.yml文件里面的关于themes的相关名字即可，不懂参考上面的链接，顺便提一句，你的 _config.yml文件既可以用 sublime来打开。</li>
-<li>最后，去到source文件里面修改里面的.md文件，利用有道云笔记即可打开，然后进行编辑，如果不懂markdown的编辑使用，就请自行百度学习，一共就只有几个语义的东西，贼简单，我打出来的这篇东西就是用这个来写的。</li>
-<li>最后提及一下，如果想要主题实现布局等更加炫酷的页面效果，自己去下载了主题的官网查看对应的框架来操作完成，本人还没有时间去尝试，请各位读者自力更生。</li>
-<li>编写好之后，因为有道云笔记是不会改变源文件的，所以建议全部复制粘贴到对应的源文件里面替代原来的文件，这样就是大功告成了。</li>
-<li>接下来，进行远端同步。还是先创建静态文件，再进行配置，还是博客根地方右键进行git bash<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#先创建静态文件</div><div class="line">$ hexo g</div><div class="line">#远程配置</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<hr>
-<h2 id="第四步，自己赶紧去打开自己的个人网站吧，那里有你的博客，可以访问的话，就足以让每一个小白开心地跳了，晚安！"><a href="#第四步，自己赶紧去打开自己的个人网站吧，那里有你的博客，可以访问的话，就足以让每一个小白开心地跳了，晚安！" class="headerlink" title="第四步，自己赶紧去打开自己的个人网站吧，那里有你的博客，可以访问的话，就足以让每一个小白开心地跳了，晚安！"></a>第四步，自己赶紧去打开自己的个人网站吧，那里有你的博客，可以访问的话，就足以让每一个小白开心地跳了，晚安！</h2><p><strong>如有错漏之处，请联系本人邮箱guangzhul@qq.com，谢谢你的支持，是我最大的动力！</strong></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -556,6 +438,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -575,8 +461,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -620,6 +515,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#利用gulp来对less编译成css"><span class="nav-number">1.</span> <span class="nav-text">利用gulp来对less编译成css</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一步，我们需要明白什么是gulp，什么是less，编译又是什么意思，这样做的意义在于哪里，对我们有什么帮助（请先安装好了node-js，需要这个环境）。"><span class="nav-number">1.0.1.</span> <span class="nav-text">第一步，我们需要明白什么是gulp，什么是less，编译又是什么意思，这样做的意义在于哪里，对我们有什么帮助（请先安装好了node.js，需要这个环境）。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二步，了解了什么是什么之后，接下来真枪实弹地开干了。"><span class="nav-number">1.0.2.</span> <span class="nav-text">第二步，了解了什么是什么之后，接下来真枪实弹地开干了。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三步，我所说的流程基本讲完了，其实就是五分钟的事，但是如果看了凌乱的百度的相关资料的话，有可能会走上很多弯路，并且重重复复不知道问题出现在哪里，这里只是用来编译less这个单一的功能的，没有其他的整套功能，我现在还不会用其他的，但是百度会有一整套的。不过如果仅仅是想学习这个的话，还是看这篇文章写得比较有逻辑性，并且在逻辑上和顺序上是合理的，没有那么多和那么乱，这个大概花了我一整天的时间。"><span class="nav-number">1.0.3.</span> <span class="nav-text">第三步，我所说的流程基本讲完了，其实就是五分钟的事，但是如果看了凌乱的百度的相关资料的话，有可能会走上很多弯路，并且重重复复不知道问题出现在哪里，这里只是用来编译less这个单一的功能的，没有其他的整套功能，我现在还不会用其他的，但是百度会有一整套的。不过如果仅仅是想学习这个的话，还是看这篇文章写得比较有逻辑性，并且在逻辑上和顺序上是合理的，没有那么多和那么乱，这个大概花了我一整天的时间。</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -725,6 +636,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
