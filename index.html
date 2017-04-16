@@ -259,6 +259,151 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://guangzhul.github.io/2017/04/17/bootstrap的使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GuangzhuL">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome to GuangzhuL's site">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/17/bootstrap的使用/" itemprop="url">
+                  Unbenannt
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-17T00:33:05+08:00">
+                2017-04-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="bootstrap的使用"><a href="#bootstrap的使用" class="headerlink" title="bootstrap的使用"></a>bootstrap的使用</h1><p><strong>梁光柱</strong></p>
+<blockquote>
+<p>我打算通过这个笔记来记录自己从bootstrap中学到过的东西，这是一个库，所以存在极大的记忆性，一般来讲不需要记，需要用的时候，我们可以直接去查找就是，但是，所有东西都是看起来简单，但是用起来的时候，才知道其中的磕磕碰碰，所以，自己需要记录下自己用过了其中的什么东西。会持续更新。</p>
+<h2 id="1-栅格系统"><a href="#1-栅格系统" class="headerlink" title="1.栅格系统"></a>1.栅格系统</h2></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">.col-xs-  //当用到这个的时候，任意时候格子都是水平排列的（如果不够12个格子，给多少用多少）</div><div class="line">.col-sm-  //下面这三个用了之后，一旦超越了它们的阈值，就会原来的堆叠变成水平排列，可以利用这个特性设置不同宽度界面的需要</div><div class="line">.col-md-</div><div class="line">.col-lg-</div><div class="line"></div><div class="line">.visible-col-xs  //这个是指定在这个范围内，就会出现xs原本该存在的效果，其他情况下都是隐藏的，下面同理</div><div class="line">.visible-col-sm</div><div class="line">.visible-col-md</div><div class="line">.visible-col-lg</div><div class="line"></div><div class="line">.hidden-col-xs  //这个是指定在这个范围内，就会隐藏xs该存在的效果，其他情况下都是显示的，下面同理</div><div class="line">.hidden-col-sm</div><div class="line">.hidden-col-md</div><div class="line">.hidden-col-lg</div><div class="line"></div><div class="line">.col-xs-offset-  //一律是向右偏移自己要的位置</div><div class="line">.col-sm-offset-</div><div class="line">.col-md-offset-</div><div class="line">.col-lg-offset-</div></pre></td></tr></table></figure>
+<h2 id="2-表单"><a href="#2-表单" class="headerlink" title="2.表单"></a>2.表单</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.form-group  //这个用于一行label，另一行是输入框</div><div class="line"></div><div class="line">.form-control  //这个加在输入框内，让输入框元素宽度为width: 100%</div><div class="line"></div><div class="line">.form-inline  //&lt;form&gt;内加，一行有所有label和输入框</div><div class="line"></div><div class="line">.form-horizontal  //&lt;form&gt;内加，一行内有label和输入框，其他对应的label和输入框另起一行</div></pre></td></tr></table></figure>
+<p>其他的一些简单细节参考官方文档</p>
+<h2 id="3-导航"><a href="#3-导航" class="headerlink" title="3.导航"></a>3.导航</h2><p>（1）一般都是<ul>开头里面接<li></li></ul></p>
+<h2 id="4-导航条"><a href="#4-导航条" class="headerlink" title="4.导航条"></a>4.导航条</h2><ol>
+<li>区分导航和导航条十分重要；</li>
+<li>导航条以<nav>开始，里面接链接调到其他地方</nav></li>
+<li><p>下面是部分代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.container  //这个用于居中</div><div class="line"></div><div class="line">.container-fluid  //这个用于让变得充满百分之一百</div></pre></td></tr></table></figure>
+</li>
+<li><p>下面是实例的代码</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">&lt;nav class=&quot;navbar navbar-default&quot;&gt;</div><div class="line">  &lt;div class=&quot;container-fluid&quot;&gt;</div><div class="line">    &lt;!-- Brand and toggle get grouped for better mobile display --&gt;</div><div class="line">    &lt;div class=&quot;navbar-header&quot;&gt;  //这里是一个头</div><div class="line">      &lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#bs-example-navbar-collapse-1&quot; aria-expanded=&quot;false&quot;&gt;</div><div class="line">        &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;</div><div class="line">        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;  //这里以及下面的三个是缩小时出现的那个按键的样式</div><div class="line">        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</div><div class="line">        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</div><div class="line">      &lt;/button&gt;</div><div class="line">      &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Brand&lt;/a&gt;  //这里是一个牌子的图标，或者说是一个头的标志</div><div class="line">    &lt;/div&gt;</div><div class="line"></div><div class="line">    &lt;!-- Collect the nav links, forms, and other content for toggling --&gt;</div><div class="line">    &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;bs-example-navbar-collapse-1&quot;&gt;</div><div class="line">      &lt;ul class=&quot;nav navbar-nav&quot;&gt;</div><div class="line">        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Link &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</div><div class="line">        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;</div><div class="line">        &lt;li class=&quot;dropdown&quot;&gt;</div><div class="line">          &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Dropdown &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;</div><div class="line">          &lt;ul class=&quot;dropdown-menu&quot;&gt;</div><div class="line">            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;</div><div class="line">            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;</div><div class="line">            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;</div><div class="line">            &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;</div><div class="line">            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;</div><div class="line">            &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;</div><div class="line">            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;&lt;/li&gt;</div><div class="line">          &lt;/ul&gt;</div><div class="line">        &lt;/li&gt;</div><div class="line">      &lt;/ul&gt;</div><div class="line">      &lt;form class=&quot;navbar-form navbar-left&quot;&gt;</div><div class="line">        &lt;div class=&quot;form-group&quot;&gt;</div><div class="line">          &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Search&quot;&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Submit&lt;/button&gt;</div><div class="line">      &lt;/form&gt;</div><div class="line">      &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;</div><div class="line">        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;</div><div class="line">        &lt;li class=&quot;dropdown&quot;&gt;</div><div class="line">          &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Dropdown &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;</div><div class="line">          &lt;ul class=&quot;dropdown-menu&quot;&gt;</div><div class="line">            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;</div><div class="line">            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;</div><div class="line">            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;</div><div class="line">            &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;</div><div class="line">            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;</div><div class="line">          &lt;/ul&gt;</div><div class="line">        &lt;/li&gt;</div><div class="line">      &lt;/ul&gt;</div><div class="line">    &lt;/div&gt;&lt;!-- /.navbar-collapse --&gt;</div><div class="line">  &lt;/div&gt;&lt;!-- /.container-fluid --&gt;</div><div class="line">&lt;/nav&gt;</div></pre></td></tr></table></figure>
+<ol>
+<li>其他细节参考文档</li>
+</ol>
+<h2 id="5-徽章"><a href="#5-徽章" class="headerlink" title="5. 徽章"></a>5. 徽章</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.badge</div></pre></td></tr></table></figure>
+<h2 id="6-面板"><a href="#6-面板" class="headerlink" title="6.面板"></a>6.面板</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;panel panel-default&quot;&gt;</div><div class="line">  &lt;div class=&quot;panel-heading&quot;&gt;Panel heading without title&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;panel-body&quot;&gt;</div><div class="line">    Panel content</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;div class=&quot;panel panel-default&quot;&gt;</div><div class="line">  &lt;div class=&quot;panel-heading&quot;&gt;</div><div class="line">    &lt;h3 class=&quot;panel-title&quot;&gt;Panel title&lt;/h3&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;div class=&quot;panel-body&quot;&gt;</div><div class="line">    Panel content</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<h2 id="7-模态框"><a href="#7-模态框" class="headerlink" title="7.模态框"></a>7.模态框</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;modal fade&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;&gt;</div><div class="line">  &lt;div class=&quot;modal-dialog&quot; role=&quot;document&quot;&gt;</div><div class="line">    &lt;div class=&quot;modal-content&quot;&gt;</div><div class="line">      &lt;div class=&quot;modal-header&quot;&gt;  //头部</div><div class="line">        &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;  //注意class=&quot;close&quot; data-dismiss=&quot;modal&quot;</div><div class="line">        &lt;h4 class=&quot;modal-title&quot;&gt;Modal title&lt;/h4&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">      &lt;div class=&quot;modal-body&quot;&gt;  //身部</div><div class="line">        &lt;p&gt;One fine body&amp;hellip;&lt;/p&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">      &lt;div class=&quot;modal-footer&quot;&gt;  //脚部</div><div class="line">        &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; data-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;</div><div class="line">        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Save changes&lt;/button&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    &lt;/div&gt;&lt;!-- /.modal-content --&gt;</div><div class="line">  &lt;/div&gt;&lt;!-- /.modal-dialog --&gt;</div><div class="line">&lt;/div&gt;&lt;!-- /.modal --&gt;</div></pre></td></tr></table></figure>
+<h2 id="8-工具提示"><a href="#8-工具提示" class="headerlink" title="8.工具提示"></a>8.工具提示</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//下面主要看data-toggle=&quot;tooltip&quot; data-placement=&quot;left&quot; title=&quot;Tooltip on left&quot;</div><div class="line">&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;left&quot; title=&quot;Tooltip on left&quot;&gt;Tooltip on left&lt;/button&gt;</div><div class="line"></div><div class="line">&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Tooltip on top&quot;&gt;Tooltip on top&lt;/button&gt;</div><div class="line"></div><div class="line">&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;bottom&quot; title=&quot;Tooltip on bottom&quot;&gt;Tooltip on bottom&lt;/button&gt;</div><div class="line"></div><div class="line">&lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;right&quot; title=&quot;Tooltip on right&quot;&gt;Tooltip on right&lt;/button&gt;</div></pre></td></tr></table></figure>
+<p>这个有个要注意的地方是，这个功能不是天生就有的，需要我么主动用js去激活的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;#example&apos;).tooltip(options)</div></pre></td></tr></table></figure>
+<p>2017年4月17日<br>0：31</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://guangzhul.github.io/2017/03/20/利用gulp来对less编译成css/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -591,7 +736,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
