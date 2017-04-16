@@ -101,7 +101,7 @@
 我打算通过这个笔记来记录自己从bootstrap中学到过的东西，这是一个库，所以存在极大的记忆性，一般来讲不需要记，需要用的时候，我们可以直接去查找就是，但是，所有东西都是看起来简单，但是用起来的时候，才知道其中的磕磕碰碰，所以，自己需要记录下自己用过了其中的什么东西。会持续更新。
 1.栅格系统
 12345678910111213141516171819.col-">
-<meta property="og:updated_time" content="2017-04-16T16:33:47.593Z">
+<meta property="og:updated_time" content="2017-04-16T16:47:44.691Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Welcome to GuangzhuL's site">
 <meta name="twitter:description" content="bootstrap的使用梁光柱
@@ -217,7 +217,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -227,7 +227,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -304,7 +304,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-17T00:33:05+08:00">
                 2017-04-17
@@ -349,7 +349,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">.col-xs-  //当用到这个的时候，任意时候格子都是水平排列的（如果不够12个格子，给多少用多少）</div><div class="line">.col-sm-  //下面这三个用了之后，一旦超越了它们的阈值，就会原来的堆叠变成水平排列，可以利用这个特性设置不同宽度界面的需要</div><div class="line">.col-md-</div><div class="line">.col-lg-</div><div class="line"></div><div class="line">.visible-col-xs  //这个是指定在这个范围内，就会出现xs原本该存在的效果，其他情况下都是隐藏的，下面同理</div><div class="line">.visible-col-sm</div><div class="line">.visible-col-md</div><div class="line">.visible-col-lg</div><div class="line"></div><div class="line">.hidden-col-xs  //这个是指定在这个范围内，就会隐藏xs该存在的效果，其他情况下都是显示的，下面同理</div><div class="line">.hidden-col-sm</div><div class="line">.hidden-col-md</div><div class="line">.hidden-col-lg</div><div class="line"></div><div class="line">.col-xs-offset-  //一律是向右偏移自己要的位置</div><div class="line">.col-sm-offset-</div><div class="line">.col-md-offset-</div><div class="line">.col-lg-offset-</div></pre></td></tr></table></figure>
 <h2 id="2-表单"><a href="#2-表单" class="headerlink" title="2.表单"></a>2.表单</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.form-group  //这个用于一行label，另一行是输入框</div><div class="line"></div><div class="line">.form-control  //这个加在输入框内，让输入框元素宽度为width: 100%</div><div class="line"></div><div class="line">.form-inline  //&lt;form&gt;内加，一行有所有label和输入框</div><div class="line"></div><div class="line">.form-horizontal  //&lt;form&gt;内加，一行内有label和输入框，其他对应的label和输入框另起一行</div></pre></td></tr></table></figure>
 <p>其他的一些简单细节参考官方文档</p>
-<h2 id="3-导航"><a href="#3-导航" class="headerlink" title="3.导航"></a>3.导航</h2><p>（1）一般都是<ul>开头里面接<li></li></ul></p>
+<h2 id="3-导航"><a href="#3-导航" class="headerlink" title="3.导航"></a>3.导航</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;ul&gt;</div><div class="line">    &lt;li&gt;&lt;/li&gt;  //一般都是&lt;ul&gt;里面接&lt;li&gt;</div><div class="line">&lt;/ul&gt;</div></pre></td></tr></table></figure>
 <h2 id="4-导航条"><a href="#4-导航条" class="headerlink" title="4.导航条"></a>4.导航条</h2><ol>
 <li>区分导航和导航条十分重要；</li>
 <li>导航条以<nav>开始，里面接链接调到其他地方</nav></li>
@@ -457,10 +457,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -481,7 +481,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">posts</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -551,7 +551,7 @@
 
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
