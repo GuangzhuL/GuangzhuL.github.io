@@ -1,0 +1,704 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-cn">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="基于PS和AI软件的PSB转AI再转SVG流程作者：梁光柱 日期：20170519
+
+  说明：我们要实现的是把地图数据包（shp格式）最终转换到geojson格式文件，而这套流程需要经历到PS和AI的使用，本文用于说明怎样使用PS和AI来处理PNG图得到SVG格式文件
+一、ArcMap部分1.    数据包的处理在进入PS部分之前先对shp格式的地图数据包进行处理，shp格式的地图经过ArcMa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Welcome to GuangzhuL's site">
+<meta property="og:url" content="http://guangzhul.github.io/2017/09/05/基于PS和AI软件的PSB转AI再转SVG流程/index.html">
+<meta property="og:site_name" content="Welcome to GuangzhuL's site">
+<meta property="og:description" content="基于PS和AI软件的PSB转AI再转SVG流程作者：梁光柱 日期：20170519
+
+  说明：我们要实现的是把地图数据包（shp格式）最终转换到geojson格式文件，而这套流程需要经历到PS和AI的使用，本文用于说明怎样使用PS和AI来处理PNG图得到SVG格式文件
+一、ArcMap部分1.    数据包的处理在进入PS部分之前先对shp格式的地图数据包进行处理，shp格式的地图经过ArcMa">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/ps%E5%AF%BC%E5%85%A5PNG%E5%9B%BE.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/ps%E9%AD%94%E6%A3%92%E6%9D%A5%E8%87%AA%E5%8A%A8%E9%80%89%E5%8F%96%E5%8C%BA%E5%9F%9F.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/ps%E6%8A%A0%E5%9B%BE.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/ps%E9%87%8D%E5%A4%8D%E6%8A%A0%E5%9B%BE.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/ps%E5%8E%BB%E6%8E%89%E9%80%8F%E6%98%8E%E5%8C%BA%E5%9F%9F1.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/ps%E5%8E%BB%E6%8E%89%E9%80%8F%E6%98%8E%E5%8C%BA%E5%9F%9F2.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/ps%E5%AF%BC%E5%85%A5PNG%E5%9B%BE.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/ps%E7%AA%97%E5%8F%A3%E5%B8%83%E5%B1%80.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/ps%E6%8F%8F%E6%91%B9%E4%B8%8E%E6%89%A9%E5%B1%95.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/ps%E5%AE%9E%E6%97%B6%E4%B8%8A%E8%89%B2.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/ps%E5%8F%96%E6%B6%88%E7%BC%96%E7%BB%84.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/ps%E5%88%A0%E9%99%A4%E5%A4%9A%E4%BD%99%E8%B7%AF%E5%BE%84.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/ps%E9%AA%8C%E8%AF%81%E8%B7%AF%E5%BE%84%E8%BF%87%E6%AD%A3%E7%A1%AE%E6%80%A7.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/ps%E4%B8%BA%E5%9B%BE%E5%B1%82%E5%91%BD%E5%90%8D.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/ps%E4%BF%9D%E5%AD%98.png">
+<meta property="og:image" content="http://omjxkpih5.bkt.clouddn.com/ps%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5.png">
+<meta property="og:updated_time" content="2017-05-22T09:02:41.419Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Welcome to GuangzhuL's site">
+<meta name="twitter:description" content="基于PS和AI软件的PSB转AI再转SVG流程作者：梁光柱 日期：20170519
+
+  说明：我们要实现的是把地图数据包（shp格式）最终转换到geojson格式文件，而这套流程需要经历到PS和AI的使用，本文用于说明怎样使用PS和AI来处理PNG图得到SVG格式文件
+一、ArcMap部分1.    数据包的处理在进入PS部分之前先对shp格式的地图数据包进行处理，shp格式的地图经过ArcMa">
+<meta name="twitter:image" content="http://omjxkpih5.bkt.clouddn.com/ps%E5%AF%BC%E5%85%A5PNG%E5%9B%BE.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://guangzhul.github.io/2017/09/05/基于PS和AI软件的PSB转AI再转SVG流程/"/>
+
+
+
+
+
+  <title>  | Welcome to GuangzhuL's site </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-cn">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-********-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Welcome to GuangzhuL's site</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">My notes</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://guangzhul.github.io/2017/09/05/基于PS和AI软件的PSB转AI再转SVG流程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GuangzhuL">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome to GuangzhuL's site">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-05T08:54:48+08:00">
+                2017-09-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="基于PS和AI软件的PSB转AI再转SVG流程"><a href="#基于PS和AI软件的PSB转AI再转SVG流程" class="headerlink" title="基于PS和AI软件的PSB转AI再转SVG流程"></a>基于PS和AI软件的PSB转AI再转SVG流程</h1><p>作者：梁光柱 日期：20170519</p>
+<blockquote>
+<p>  说明：我们要实现的是把地图数据包（shp格式）最终转换到geojson格式文件，而这套流程需要经历到PS和AI的使用，本文用于说明怎样使用PS和AI来处理PNG图得到SVG格式文件</p>
+<h2 id="一、ArcMap部分"><a href="#一、ArcMap部分" class="headerlink" title="一、ArcMap部分"></a>一、ArcMap部分</h2><h3 id="1-数据包的处理"><a href="#1-数据包的处理" class="headerlink" title="1.    数据包的处理"></a>1.    数据包的处理</h3><p>在进入PS部分之前先对shp格式的地图数据包进行处理，shp格式的地图经过ArcMap软件处理后我们可以得到PNG格式的图片，这些图片就是接下来的工作的素材。</p>
+<h2 id="二、-PS部分"><a href="#二、-PS部分" class="headerlink" title="二、    PS部分"></a>二、    PS部分</h2><h3 id="1-导入PNG图"><a href="#1-导入PNG图" class="headerlink" title="1.    导入PNG图"></a>1.    导入PNG图</h3><p>a、    先将有文字的PNG图拖进PS里面作为背景;<br>b、    然后再将没有文字的PNG图放进PS里面；<br>c、    并且将其置入背景图。<br><img src="http://omjxkpih5.bkt.clouddn.com/ps%E5%AF%BC%E5%85%A5PNG%E5%9B%BE.png" alt="导入PNG图"></p>
+<h2 id="2-用魔棒来自动选取区域"><a href="#2-用魔棒来自动选取区域" class="headerlink" title="2.用魔棒来自动选取区域"></a>2.用魔棒来自动选取区域</h2><p>a、    快捷键“W”选择魔棒;<br>b、    参数容差选择为0；<br>c、    同时隐藏背景图层（这个后期用来命名对照使用），我们要操作的图层是后来置进去的那份图层（两张图的放进去顺序不可以颠倒，不然会出现不必要的麻烦）。<br><img src="http://omjxkpih5.bkt.clouddn.com/ps%E9%AD%94%E6%A3%92%E6%9D%A5%E8%87%AA%E5%8A%A8%E9%80%89%E5%8F%96%E5%8C%BA%E5%9F%9F.png" alt="用魔棒来自动选取区域"></p>
+<h2 id="3-抠图"><a href="#3-抠图" class="headerlink" title="3.抠图"></a>3.抠图</h2><p>a、    用魔棒选取出我们要的区域；<br>b、    按下快捷键“Ctrl+J”复制该图层；<br>c、    然后再次选中该图层，按下快捷键“Alt+Delete”将我们本来设置好的黑色背景色覆盖进去（复制和覆盖背景色这两个步骤可以连续进行，方便提高效率）。<br><img src="http://omjxkpih5.bkt.clouddn.com/ps%E6%8A%A0%E5%9B%BE.png" alt="抠图"></p>
+<h2 id="4-重复抠图"><a href="#4-重复抠图" class="headerlink" title="4.重复抠图"></a>4.重复抠图</h2><p>a、    隐藏掉之前处理好的图层；<br>b、    用鼠标选择到我们最初始的图层；<br>c、    接着不断重复上面的第3步骤，直到全部的图层被抠完。<br><img src="http://omjxkpih5.bkt.clouddn.com/ps%E9%87%8D%E5%A4%8D%E6%8A%A0%E5%9B%BE.png" alt="重复抠图"></p>
+<h2 id="5-去掉透明区域"><a href="#5-去掉透明区域" class="headerlink" title="5.去掉透明区域"></a>5.去掉透明区域</h2><p>a、    隐藏掉背景图和原始处理的图片，显示抠出来的所有图层；<br>b、    选择图像—&gt;裁切，选择基于透明图像，点击确认。<br><img src="http://omjxkpih5.bkt.clouddn.com/ps%E5%8E%BB%E6%8E%89%E9%80%8F%E6%98%8E%E5%8C%BA%E5%9F%9F1.png" alt="去掉透明区域1"><br><img src="http://omjxkpih5.bkt.clouddn.com/ps%E5%8E%BB%E6%8E%89%E9%80%8F%E6%98%8E%E5%8C%BA%E5%9F%9F2.png" alt="去掉透明区域2"></p>
+<h2 id="6-保存"><a href="#6-保存" class="headerlink" title="6.保存"></a>6.保存</h2><p>a、    快捷键“Ctrl+shift+S”另存为PSD格式（低版本）或者PSB格式（高版本）的文件；<br>b、    注意：保存的时候让所有的图层处于显示状态。</p>
+<h1 id="三、AI部分"><a href="#三、AI部分" class="headerlink" title="三、AI部分"></a>三、AI部分</h1><p>这里以AICC2015版本软件为例，所以操作和原来的旧版本有所不同，同时具备优点和缺点，但是其有最强大的功能就是可以打开比较大和比较高级的PSB格式的文件，而旧版的版本却不支持，现在介绍整体的操作流程。</p>
+<h2 id="1-导入PSB"><a href="#1-导入PSB" class="headerlink" title="1.导入PSB"></a>1.导入PSB</h2><p>a、    将上面刚生成的PSB文件拖进AI打开；<br>b、    会弹出下图提示框，把“导入隐藏图层给” 勾上；<br>c、    按下确定。<br><img src="http://omjxkpih5.bkt.clouddn.com/ps%E5%AF%BC%E5%85%A5PNG%E5%9B%BE.png" alt="导入PSB"></p>
+<h2 id="2-窗口布局"><a href="#2-窗口布局" class="headerlink" title="2.窗口布局"></a>2.窗口布局</h2><p>AICC没办法给所有的图层同时进行描摹操作，这也是其的一个缺点，所以我们需要一个一个图层进行描摹操作的。<br>接下来的这一步是非必须的，仅为了提高工作效率而用:<br>a、    将描摹的信息窗口调出来（点击窗口图像描摹）；<br>b、    放在我们操作界面的左边（如图所示）。<br><img src="http://omjxkpih5.bkt.clouddn.com/ps%E7%AA%97%E5%8F%A3%E5%B8%83%E5%B1%80.png" alt="窗口布局"></p>
+<h2 id="3-描摹与扩展"><a href="#3-描摹与扩展" class="headerlink" title="3.描摹与扩展"></a>3.描摹与扩展</h2><p>a、    隐藏其他图层，保留操作图层；<br>b、    Ctrl+A全选；<br>c、    点击信息窗口的描摹；<br>d、    再点击扩展（这是必须的，不然没法后续的实时上色）。<br><img src="http://omjxkpih5.bkt.clouddn.com/ps%E6%8F%8F%E6%91%B9%E4%B8%8E%E6%89%A9%E5%B1%95.png" alt="描摹与扩展"></p>
+<h2 id="4-实时上色"><a href="#4-实时上色" class="headerlink" title="4.实时上色"></a>4.实时上色</h2><p>a、    点击对象；<br>b、    快捷键N—&gt;A进行实时上色的建立；<br>c、    快捷键N—&gt;R进行实时上色的释放。<br><img src="http://omjxkpih5.bkt.clouddn.com/ps%E5%AE%9E%E6%97%B6%E4%B8%8A%E8%89%B2.png" alt="实时上色"></p>
+<h2 id="5-取消编组"><a href="#5-取消编组" class="headerlink" title="5.    取消编组"></a>5.    取消编组</h2><p>这时候点开图层来看其中的路径，会发现，路径的名字不是&lt;路径&gt;，而是写着“编组”。这时候：<br>a、    我们要选中图层，鼠标右击，选中“取消编组”；<br>但是这种办法效率非常低，我们可以：<br>b、利用快捷键“ctrl+shift+G”来直接取消编组（如果用了搜狗输入法可能会激活搜狗的快捷键，我们取消搜狗输入法的快捷键就行）。<br><img src="http://omjxkpih5.bkt.clouddn.com/ps%E5%8F%96%E6%B6%88%E7%BC%96%E7%BB%84.png" alt="取消编组"></p>
+<h2 id="6-删除多余的路径"><a href="#6-删除多余的路径" class="headerlink" title="6.    删除多余的路径"></a>6.    删除多余的路径</h2><p>取消编组之后会发现路径存在多条，这时候我们只需要保留一条闭合的路径，其他的删除即可，一般保留的都默认是最后一条（偶尔有例外情况，可能是倒数第二条），我们可以通过看小图标是否是一个闭合的圆来判断，提高判断的概率。<br>a、    按住shift键，鼠标点击需要的那条路径（例如最后一条）进行取消选择；<br>b、    其他多余的路径默认被选择了；<br>c、    按下delete，便可以删除其他多余的路径。<br><img src="http://omjxkpih5.bkt.clouddn.com/ps%E5%88%A0%E9%99%A4%E5%A4%9A%E4%BD%99%E8%B7%AF%E5%BE%84.png" alt="删除多余的路径"></p>
+<h2 id="7-验证路径的正确性"><a href="#7-验证路径的正确性" class="headerlink" title="7.    验证路径的正确性"></a>7.    验证路径的正确性</h2><p>从上面的图我们可以看到，保留的路径的宽度太低，所以导致看得不够清晰，这时候我们可以通过选择这个路径的方式来观察路径时候是闭合的圆。<br>a、    按下快捷键“Ctrl+A”便可以选择我们的路径，并且能够提供清晰的视觉效果。<br>b、    观察是否是我们要的闭合路径。<br><img src="http://omjxkpih5.bkt.clouddn.com/ps%E9%AA%8C%E8%AF%81%E8%B7%AF%E5%BE%84%E8%BF%87%E6%AD%A3%E7%A1%AE%E6%80%A7.png" alt="验证路径的正确性"></p>
+<h2 id="8-重复其他的图层"><a href="#8-重复其他的图层" class="headerlink" title="8.    重复其他的图层"></a>8.    重复其他的图层</h2><p>a、    切换到下一个图层，即隐藏掉处理好的图层，显示下一个要操作的图层；<br>b、    重复上面的第3到第7步。</p>
+<h2 id="9-为图层命名"><a href="#9-为图层命名" class="headerlink" title="9.    为图层命名"></a>9.    为图层命名</h2><p>a、    将带字的背景图显示；<br>b、    将准备命名的图层显示，其他图层隐藏；<br>c、    对着显示的轮廓，找到对应的位置，找到街道的名字；<br>d、    双击图层重命名。<br><img src="http://omjxkpih5.bkt.clouddn.com/ps%E4%B8%BA%E5%9B%BE%E5%B1%82%E5%91%BD%E5%90%8D.png" alt="重复其他的图层"></p>
+<h2 id="10-保存"><a href="#10-保存" class="headerlink" title="10.    保存"></a>10.    保存</h2><p>a、    把带字的背景图删除；<br>b、    快捷键“Ctrl+shift+S”另存为AI格式文件；<br>c、    上面的AI格式文件保存完成后，再次快捷键“Ctrl+shift+S”另存为SVG格式文件<br><img src="http://omjxkpih5.bkt.clouddn.com/ps%E4%BF%9D%E5%AD%98.png" alt="保存"></p>
+<h2 id="11-特殊情况"><a href="#11-特殊情况" class="headerlink" title="11.    特殊情况"></a>11.    特殊情况</h2><p>有时候两个区域是分开的，也就是同一个地名，却有两个闭圆的区域。这时候，我们将其中一个图层的路径拖曳到同名图层的路径上面去，再把原有的那个图层给删除，保留一个图层即可。<br>a、    将其中一个重名的图层下的路径用鼠标拖动至另一图层下面；<br>b、    把被拖动的那个图层给删除；<br>c、    最后只剩下一个命名的图层，其下有两条路径；<br>d、    保存的时候备注好哪条街道下有两条路径，方便以后寻找。<br><img src="http://omjxkpih5.bkt.clouddn.com/ps%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5.png" alt="特殊情况"></p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/17/bootstrap的使用/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/05/用CSS对DIV画三角形/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="GuangzhuL" />
+          <p class="site-author-name" itemprop="name">GuangzhuL</p>
+           
+              <p class="site-description motion-element" itemprop="description">This wetsize has all my projects</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基于PS和AI软件的PSB转AI再转SVG流程"><span class="nav-number">1.</span> <span class="nav-text">基于PS和AI软件的PSB转AI再转SVG流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、ArcMap部分"><span class="nav-number">1.1.</span> <span class="nav-text">一、ArcMap部分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-数据包的处理"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.    数据包的处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、-PS部分"><span class="nav-number">1.2.</span> <span class="nav-text">二、    PS部分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-导入PNG图"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.    导入PNG图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-用魔棒来自动选取区域"><span class="nav-number">1.3.</span> <span class="nav-text">2.用魔棒来自动选取区域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-抠图"><span class="nav-number">1.4.</span> <span class="nav-text">3.抠图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-重复抠图"><span class="nav-number">1.5.</span> <span class="nav-text">4.重复抠图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-去掉透明区域"><span class="nav-number">1.6.</span> <span class="nav-text">5.去掉透明区域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-保存"><span class="nav-number">1.7.</span> <span class="nav-text">6.保存</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、AI部分"><span class="nav-number">2.</span> <span class="nav-text">三、AI部分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-导入PSB"><span class="nav-number">2.1.</span> <span class="nav-text">1.导入PSB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-窗口布局"><span class="nav-number">2.2.</span> <span class="nav-text">2.窗口布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-描摹与扩展"><span class="nav-number">2.3.</span> <span class="nav-text">3.描摹与扩展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-实时上色"><span class="nav-number">2.4.</span> <span class="nav-text">4.实时上色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-取消编组"><span class="nav-number">2.5.</span> <span class="nav-text">5.    取消编组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-删除多余的路径"><span class="nav-number">2.6.</span> <span class="nav-text">6.    删除多余的路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-验证路径的正确性"><span class="nav-number">2.7.</span> <span class="nav-text">7.    验证路径的正确性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-重复其他的图层"><span class="nav-number">2.8.</span> <span class="nav-text">8.    重复其他的图层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-为图层命名"><span class="nav-number">2.9.</span> <span class="nav-text">9.    为图层命名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-保存"><span class="nav-number">2.10.</span> <span class="nav-text">10.    保存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-特殊情况"><span class="nav-number">2.11.</span> <span class="nav-text">11.    特殊情况</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">GuangzhuL</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
